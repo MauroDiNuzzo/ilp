@@ -19,9 +19,7 @@ The currently implemented brute-force solution pruning should be enhanced with a
 
 ## Limitations
 
-The library has not been developed with performance in mind (everything is written in Prolog). There are many points where better choices could have been made to reduce CPU time. Furthermore, the present ILP implementation does not make use of mode declarations to prune the search space, and as a result the number of required inferences rapidly increases with problem complexity (number of examples, arity of the knewledge predicates, and so on). Finallt, auxiliary predicate invention is not implemented. The use of the library should therefore be restricted to small examples.
-
-Please also note that the library has been developed and tested on SWI Prolog version 9.2.1 (<https://www.swi-prolog.org/>).
+The library has not been developed with performance in mind (everything is written in Prolog). There are many points where better choices could have been made to reduce CPU time. Furthermore, the present ILP implementation does not make use of mode declarations to prune the search space, and as a result the number of required inferences rapidly increases with problem complexity (number of examples, arity of the knewledge predicates, and so on). Accordingly, auxiliary predicate invention is not implemented. The use of the library should therefore be restricted to small examples. Please also note that the library has been developed and tested on SWI Prolog version 9.2.1 (<https://www.swi-prolog.org/>).
 Compatibility with other Prolog systems/versions is not warranted.
 Finally, this ILP implementation is substantially different from other more robust and comprehensive systems (for example, see the classical [Aleph](https://www.cs.ox.ac.uk/activities/programinduction/Aleph/) or the newer [Popper/Metagol](https://github.com/logic-and-learning-lab/Popper)). 
 
@@ -148,7 +146,7 @@ Finally, notice that an error is raised if you attempt to learn the same predica
 %ERROR: No permission to learn predicate `grandparent/2'
 ```
 
-However, you can use the unlearn predicate to cancel the effects of learning:
+However, you can use the `unlearn/1` predicate to cancel the effects of learning:
 
 ```prolog
 :- unlearn(grandparent/2).
@@ -291,3 +289,6 @@ However, a new situation (e.g., the person changes job) might affect things:
 Muggleton, S. (1991). Inductive logic programming. New Generation Computing, 8(4), 295-318.
 
 Shapiro, E. Y. (1983). Algorithmic program debugging. Cambridge, MA: MIT Press.
+
+Cropper, A., Dumančić, S., Evans, R. et al. (2022) Inductive logic programming at 30. Mach Learn 111, 147–172.
+
