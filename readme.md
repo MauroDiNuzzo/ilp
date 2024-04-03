@@ -154,7 +154,7 @@ However, you can use the `unlearn/1` predicate to cancel the effects of learning
    false
 ```
 
-Please see the Prolog source code of the SLP library for more detailed information on the usage of the relevant predicates.
+Please see the Prolog source code of the ILP library for more detailed information on the usage of the relevant predicates.
 
 ## Other examples
 
